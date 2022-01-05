@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = load_dotenv() 
-print(SECRET_KEY)
 # Application definition
 
 INSTALLED_APPS = [
