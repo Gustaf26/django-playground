@@ -21,11 +21,10 @@
 
 <!-- Status -->
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -37,17 +36,27 @@
 
 ## :dart: About
 
-CREATE A DJANGO PROJECT WITH BETTER KNOWLEDGE
+GAIN SOME BASIC KNOWLEDGE OF WHAT THE CODE DOES IN A DJANGO BOILERPLATE
+
+Here you got a guidance for beginners in Python & Django to understand what the boilerplate for an app with these technologies consists of.
+
+I commented the files with texts from the documentation so that you can understand better what every line of code stands for in an app ready to work with.
+
+I mention below the steps to follow in order to create a similar boilerplate, if you want to create a project by yourself instead of just cloning my repo.
+
+BASICS STEP TO CREATE AN APP WITH DJANGO AND PYTHON
+
+You might need to set up some basic installation in your project. It needs though some basic knowledge of how a text editor works, and to have Python, Django and pip instelled. Let´s set to work!
 
 Create a root folder from scratch in your computer and open it with VSCode
 
 Before running Django, you need to set up a virtual environment (venv) in the root folder and activate it with:
 
-python -m venv ./venv
+    python -m venv ./venv
 
 Then you can start the project running this command on the root folder
 
-django-admin startproject mysite
+    django-admin startproject mysite
 
 In manage.py you may find the following standard variable and value:
 
@@ -56,15 +65,13 @@ main()
 
 It is there so that this root folder where manage.py is, will be considered as a script that can be reused and that will be the main folder of the project as well.
 
-Now that your environment (a "project") has been set up, you're ready to get to work.
-
-What we want to do is to create an application that does something inside our project
+Now that your environment (a "project") has been set up, you're ready to develop an app. What we want to do is to create an application that does something inside our project
 
 Every application you write in Django consists of a Python package that follows a certain convention. Django has a utility that automatically generates the basic directory structure of an application, so you can focus on writing code instead of creating directories.
 
 In orfer to create an app inside our project. We run the following command:
 
-python manage.py startapp my_app_name
+    python manage.py startapp my_app_name
 
 What we get is a bunch of files that will be used as a python-package with submodules (the python files belonging to the app).
 
@@ -72,7 +79,7 @@ The **init**.py file inside the app is nothing but an initializer of the app tha
 
 Setting up environmental variables
 
-As stated above, Django runs with SQLite by default, that is, a sqlite database file will be automatically added to the root folder because that is what is stated in the settings.py file in the project folder.
+Django runs with SQLite by default, that is, a sqlite database file will be automatically added to the root folder because that is what is stated in the settings.py file in the project folder.
 
 In this file you will find a SECRET_KEY variable to run the db, with a value that is not to be exposed, for instance in Github.
 
@@ -82,11 +89,11 @@ In order to keep the secret key ‘secret’ we need to install a Python package
 
 …and then import to the settings.py the dotenv package as follows:
 
-from dotenv import load_dotenv
+    from dotenv import load_dotenv
 
 Create a file named .env in the root folder, and add there the variable
 
-SECRET_KEY = ”your_database_secret_key”.
+    SECRET_KEY = ”your_database_secret_key”.
 
 Now in settings.py you can just write SECRET_KEY=load_dotenv() and you are ready to go!
 
