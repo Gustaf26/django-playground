@@ -5,4 +5,6 @@ from django.shortcuts import render
 
 # Create your views here.
 def say_hello(request):
+   
+   # The render() function takes the requested object as its first argument, a template name as its second argument, and a dictionary as its optional third argument. 
    return render(request, 'hello.html', {'name':'Gustaf'})
