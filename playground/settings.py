@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    # The one below allows us to handle with the superuser that we can create to have access to the admin site
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
