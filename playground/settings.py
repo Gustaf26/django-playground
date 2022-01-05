@@ -50,6 +50,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Setting up this variable will enable to load the corresponding
+# Python module to the urls and views of our app playground
 ROOT_URLCONF = 'playground.urls'
 
 TEMPLATES = [
