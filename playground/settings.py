@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # We need to register our app here, so it becomes functional
     'show_something_app'
 ]
 
